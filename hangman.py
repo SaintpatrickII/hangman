@@ -45,6 +45,6 @@ class hangman:
 
 if __name__ == '__main__':
     print('please input a character:')
-    hanging_about = hangman()
+    hanging_about = hangman(word=random.choice(possible_words), word_guessed=['*']*len(word), num_letters=len(set(word)), num_lives=5, word_list=possible_words, list_of_guesses=[])
     new_guess = hanging_about.ask_for_input(input())
     hanging_about.check_guess(new_guess)
